@@ -23,7 +23,6 @@ title_tags = soup.select(selector="li h3", class_="c-title")
 song_titles = [title.get_text().strip() for title in title_tags][:100]
 artist_names = [name.next_element.next_element.next_element.text.strip() for name in title_tags][:100]
 song_and_artist = dict(zip(song_titles, artist_names))
-print(f"Top 100 Billboard songs for {chosen_date}, were added to the list.")
 
 # authenticate the user on spotify
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY_ID,
@@ -44,7 +43,7 @@ for (song, artist) in song_and_artist.items():
         uri = result["tracks"]["items"][0]["uri"]
         track_uris.append(uri)
     except IndexError:
-        print("Song not found on Spotify. Skipped.")
+        print(f"Song '{song}' by '{artist}' not found on Spotify. Skipped.")
 print(f"Found {len(track_uris)} songs on Spotify.")
 
 # create a playlist for the current user on spotify and add each track that was found to that playlist
