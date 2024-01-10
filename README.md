@@ -15,7 +15,7 @@ This Python script fetches the Billboard Hot 100 chart for a specified date and 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/billboard-to-spotify.git
+   git clone https://github.com/isotronic/billboard-to-spotify.git
    ```
 
 2. Navigate to the project directory:
