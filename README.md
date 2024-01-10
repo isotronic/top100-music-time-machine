@@ -15,12 +15,12 @@ This Python script fetches the Billboard Hot 100 chart for a specified date and 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/isotronic/billboard-to-spotify.git
+   git clone https://github.com/isotronic/top100-music-time-mashine.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd billboard-to-spotify
+   cd top100-music-time-mashine
    ```
 
 3. Install dependencies:
@@ -45,7 +45,7 @@ This Python script fetches the Billboard Hot 100 chart for a specified date and 
 
 1. Run the script:
    ```bash
-   python playlist_generator.py
+   python main.py
    ```
 
 2. Input the date you want to create a playlist for in the format `YYYY-MM-DD` when prompted.
